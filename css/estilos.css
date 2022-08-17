@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;600;700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DynaPuff', cursive;
+}
+input{
+    display: none;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0012a0;
+    background-image: linear-gradient(225deg, #0012a0 0%, #3b2785 50%, #7b57cd 100%);
+
+}
+.container .triangle1{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #dda6a3;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+    box-shadow: 0px 0px 10px rgba(255,255,255,0.2);
+    top: 20%;
+    left: 25%;
+    rotate: 45deg;
+    border-radius: 10px;
+    animation: t1 3s linear infinite;
+}
+@keyframes t1{
+    0%{
+        top: 20%;
+    }
+    50%{
+        top: 28%;
+    }
+    100%{
+        top: 20%;
+    }
+}
+
+.container .triangle2{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #dda6a3;
+    background-image: linear-gradient(19deg, #5a1e1b 0%, #3c297e 100%);
+    box-shadow: 0px 0px 10px rgba(255,255,255,0.2);
+    top: 10%;
+    right: 25%;
+    rotate: 45deg;
+    border-radius: 10px;
+    animation: t2 5s linear infinite;
+}
+@keyframes t2{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(120px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.container .triangle3{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #dda6a3;
+    background-image: linear-gradient(19deg, #3ee0d8 0%, #009b8e 100%);
+    box-shadow: 0px 0px 10px rgba(30, 255, 188, 0.849);
+    bottom: 10%;
+    right: 45%;
+    rotate: 45deg;
+    border-radius: 10px;
+    animation: t3 7s linear infinite;
+}
+@keyframes t3{
+    0%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(-120px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+
+.container-cards{
+    width: 700px;
+    height: 340px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: .3s linear;
+}
+.container-cards:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    transition: .3s linear;
+}
+.container-cards label img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .4s;
+}
+.container-cards .card1{
+    width: 450px;
+    height: 100%;
+    border-radius: 70px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s linear;
+    position: relative;
+}
+.container-cards .card1:hover{
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7),
+                0px 0px 4px rgba(0, 0, 0, 0.7),
+                0px 0px 4px rgba(0, 0, 0, 0.7);
+                transition: .3s linear;
+}
+.container-cards .card1:hover img{
+transform: scale(1.3);
+transition: .6s;
+}
+#imagen1:checked ~ .container .container-cards .card1{
+    width: 100%;
+    height: 100%;
+}
+#imagen1:checked ~ .container .container-cards .card1:hover{
+box-shadow: none;
+}
+#imagen1:checked ~ .container .container-cards .card1:hover img{
+    transform: scale(1.0);
+}
+.container .container-cards .card1 p{
+    position: absolute;
+    left: 40px;
+    bottom: 12px;
+    letter-spacing: 2px;
+    text-shadow:1px 2px 4px rgba(0, 0, 0,1),
+                1px 2px 4px rgba(0, 0, 0,1),
+                1px 2px 4px rgba(0, 0, 0,1);
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: .3s linear;
+    transform: scale(0);
+}
+#imagen1:checked ~.container .container-cards .card1 p{
+    opacity: 1;
+    transition: .3s linear;
+    font-size: 14px;
+    transform: scale(1.0);
+}
+.container-cards .card2{
+    width: 50px;
+    height: 100%;
+    border-radius: 70px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .2s linear;
+    position: relative;
+
+}
+.container-cards .card2:hover{
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7),
+                0px 0px 4px rgba(0, 0, 0, 0.7),
+                0px 0px 4px rgba(0, 0, 0, 0.7);
+                transition: .3s linear;
+}
+.container-cards .card2:hover img{
+transform: scale(1.3);
+transition: .6s;
+}
+
+.container .container-cards .card2 p{
+    position: absolute;
+    left: 40px;
+    font-size: 18px;
+    bottom: 12px;
+    letter-spacing: 4px;
+    text-shadow:1px 2px 4px rgba(0, 0, 0,1),
+                1px 2px 4px rgba(0, 0, 0,1),
+                1px 2px 4px rgba(0, 0, 0,1);
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: .1s linear;
+    transform: scale(0);
+}
+#imagen2:checked ~ .container .container-cards .card2 p{
+    opacity: 1;
+    transition: .4s linear;
+    font-size: 14px;
+    transform: scale(1.0);
+}
+
+#imagen2:checked ~ .container .container-cards .card2{
+    width: 100%;
+    height: 100%;
+    transition: .3s linear;
+}
+#imagen2:checked ~ .container .container-cards .card2:hover{
+    box-shadow: none;
+}
+
+#imagen2:checked ~ .container .container-cards .card2:hover img{
+    transform: scale(1.0);
+}
+#imagen2:checked ~ .container .container-cards .card1{
+    width: 50px;
+    height: 100%;
+    transition: .3s linear;
+}
+.container-cards .card3{
+    width: 50px;
+    height: 100%;
+    border-radius: 70px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s linear;
+    position: relative;
+}
+.container-cards .card3:hover{
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7),
+                0px 0px 4px rgba(0, 0, 0, 0.7),
+                0px 0px 4px rgba(0, 0, 0, 0.7);
+                transition: .3s linear;
+}
+.container-cards .card3:hover img{
+transform: scale(1.3);
+transition: .6s;
+}
+.container .container-cards .card3 p{
+    position: absolute;
+    left: 40px;
+    font-size: 18px;
+    bottom: 12px;
+    letter-spacing: 4px;
+    text-shadow:1px 2px 4px rgba(0, 0, 0,1),
+                1px 2px 4px rgba(0, 0, 0,1),
+                1px 2px 4px rgba(0, 0, 0,1);
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: .1s linear;
+    transform: scale(0);
+}
+#imagen3:checked ~ .container .container-cards .card3 p{
+    opacity: 1;
+    transition: .4s linear;
+    font-size: 14px;
+    transform: scale(1.0);
+
+}
+#imagen3:checked ~ .container .container-cards .card3{
+    width: 100%;
+    height: 100%;
+    transition: .3s linear;
+}
+#imagen3:checked ~ .container .container-cards .card1{
+    width: 50px;
+    height: 100%;
+    transition: .3s linear;
+}
+#imagen3:checked ~ .container .container-cards .card3:hover{
+    box-shadow: none;
+}
+
+#imagen3:checked ~ .container .container-cards .card3:hover img{
+    transform: scale(1.0);
+}
+.container-cards .card4{
+    width: 50px;
+    height: 100%;
+    border-radius: 70px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s linear;
+    position: relative;
+}
+.container-cards .card4:hover{
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7),
+                0px 0px 4px rgba(0, 0, 0, 0.7),
+                0px 0px 4px rgba(0, 0, 0, 0.7);
+                transition: .3s linear;
+}
+.container-cards .card4:hover img{
+transform: scale(1.3);
+transition: .6s;
+}
+.container .container-cards .card4 p{
+    position: absolute;
+    left: 40px;
+    font-size: 18px;
+    bottom: 12px;
+    letter-spacing: 4px;
+    text-shadow:1px 2px 4px rgba(0, 0, 0,1),
+                1px 2px 4px rgba(0, 0, 0,1),
+                1px 2px 4px rgba(0, 0, 0,1);
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: .1s linear;
+    transform: scale(0);
+}
+#imagen4:checked ~ .container .container-cards .card4 p{
+    opacity: 1;
+    transition: .4s linear;
+    font-size: 14px;
+    transform: scale(1.0);
+}
+#imagen4:checked ~ .container .container-cards .card4{
+    width: 100%;
+    height: 100%;
+    transition: .3s linear;
+}
+#imagen4:checked ~ .container .container-cards .card1{
+    width: 50px;
+    height: 100%;
+    transition: .3s linear;
+}
+#imagen4:checked ~ .container .container-cards .card4:hover{
+    box-shadow: none;
+}
+
+#imagen4:checked ~ .container .container-cards .card4:hover img{
+    transform: scale(1.0);
+}
+.container-cards .card5{
+    width: 50px;
+    height: 100%;
+    border-radius: 70px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s linear;
+    position: relative;
+}
+.container-cards .card5:hover{
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7),
+                0px 0px 4px rgba(0, 0, 0, 0.7),
+                0px 0px 4px rgba(0, 0, 0, 0.7);
+                transition: .3s linear;
+}
+.container-cards .card5:hover img{
+transform: scale(1.3);
+transition: .6s;
+}
+.container .container-cards .card5 p{
+    position: absolute;
+    left: 40px;
+    font-size: 18px;
+    bottom: 12px;
+    letter-spacing: 4px;
+    text-shadow:1px 2px 4px rgba(0, 0, 0,1),
+                1px 2px 4px rgba(0, 0, 0,1),
+                1px 2px 4px rgba(0, 0, 0,1);
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: .1s linear;
+    transform: scale(0);
+}
+#imagen5:checked ~ .container .container-cards .card5 p{
+    opacity: 1;
+    transition: .4s linear;
+    font-size: 14px;
+    transform: scale(1.0);
+
+}
+#imagen5:checked ~ .container .container-cards .card5{
+    width: 100%;
+    height: 100%;
+    transition: .3s linear;
+}
+#imagen5:checked ~ .container .container-cards .card1{
+    width: 50px;
+    height: 100%;
+    transition: .3s linear;
+}
+#imagen5:checked ~ .container .container-cards .card5:hover{
+    box-shadow: none;
+}
+
+#imagen5:checked ~ .container .container-cards .card5:hover img{
+    transform: scale(1.0);
+}
